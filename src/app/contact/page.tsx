@@ -14,7 +14,7 @@ export default function ContactPage() {
         <h1 className="font-display text-xl md:text-3xl text-(--ink)">
           Schedule your visit today
         </h1>
-        <p className="mt-1 text-xs md:text-sm text-(--ink)/65 max-w-xl mx-auto">
+        <p className="mt-1 text-sm text-(--ink)/65 max-w-xl mx-auto">
           Ready to take the next step toward optimal oral health? We&apos;re
           here to help — schedule an appointment or reach out any way that
           works for you.

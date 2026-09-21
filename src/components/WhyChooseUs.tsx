@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
               className="glass-dark rounded-2xl p-3"
             >
               <h3 className="font-display mb-2 text-sm md:text-xl">{r.title}</h3>
-              <p className="text-white/65 text-xs md:text-sm">{r.desc}</p>
+              <p className="text-white/65 text-sm ">{r.desc}</p>
             </motion.div>
           ))}
         </div>

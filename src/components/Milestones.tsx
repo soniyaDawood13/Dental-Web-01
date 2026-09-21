@@ -29,7 +29,7 @@ export default function Milestones() {
             <div className="shrink-0 w-16 text-(--aqua-deep) font-display text-lg md:text-xl pt-0.5">{m.year}</div>
             <div className="pb-2 border-l border-black/10 pl-6 -mt-0.5">
               <h3 className="font-medium text-base md:text-lg text-(--ink)">{m.title}</h3>
-              <p className="text-xs md:text-sm text-(--ink)/60 mt-1">{m.desc}</p>
+              <p className="text-sm text-(--ink)/60 mt-1">{m.desc}</p>
             </div>
           </motion.div>
         ))}

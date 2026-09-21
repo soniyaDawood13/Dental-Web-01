@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section className="mesh-bg pt-22 md:pt-26 pb-8 md:pb-12 text-center px-6">
+      <section className="mesh-bg pt-22 md:pt-26 pb-8 md:pb-12 text-center px-4">
         <h1 className="font-display text-2xl md:text-3xl text-(--ink)">
           Committed to your smile
         </h1>
-        <p className="mt-2 text-xs md:text-sm text-(--ink)/65 max-w-xl mx-auto">
+        <p className="mt-2 text-sm text-(--ink)/65 max-w-xl mx-auto">
           For over 15 years, BrightSmile Dental has provided exceptional care
           with a personal touch.
         </p>

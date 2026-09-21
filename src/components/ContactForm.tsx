@@ -15,7 +15,7 @@ const services = [
 ];
 
 // Update this to your real clinic WhatsApp number, country code first, no "+" or spaces.
-const CLINIC_WHATSAPP_NUMBER = "03323307551";
+const CLINIC_WHATSAPP_NUMBER = "(111) 123-4567";
 
 // Clinic hours — kept in one place so the form validation always matches
 // whatever is shown in the "Office hours" card below.
@@ -149,7 +149,7 @@ export default function ContactForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           onSubmit={handleSubmit}
-          className="glass rounded-3xl p-2 md:p-4 space-y-5 ring-1 ring-gray-300"
+          className="glass rounded-3xl p-2 md:p-6 space-y-5 ring-1 ring-gray-300"
         >
           <h2 className="font-display text-xl md:text-3xl text-(--ink) mb-1">
             Schedule an appointment
@@ -326,12 +326,12 @@ export default function ContactForm() {
 
           <div className="glass rounded-3xl p-4 ring ring-gray-300">
             <h3 className="font-display text-lg text-(--ink) mb-1">Office hours</h3>
-            <ul className="text-xs md:text-sm text-(--ink)/65 space-y-1">
+            <ul className="text-sm text-(--ink)/65 space-y-1">
               <li className="flex justify-between"><span>Mon - Fri</span><span>8:00 AM - 6:00 PM</span></li>
               <li className="flex justify-between"><span>Saturday</span><span>9:00 AM - 2:00 PM</span></li>
               <li className="flex justify-between"><span>Sunday</span><span>Closed</span></li>
             </ul>
-            <p className="text-xs text-(--coral) mt-2">
+            <p className="text-sm text-(--coral) mt-2">
               Emergency care available 24/7 — call our emergency line for urgent issues.
             </p>
           </div>

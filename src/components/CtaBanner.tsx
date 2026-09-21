@@ -21,7 +21,7 @@ export default function CtaBanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-2 text-white/75 text-sm md:text-sm"
+          className="mt-2 text-white/75 text-sm "
         >
           Schedule your visit today and take the first step toward a
           confident, healthy smile.

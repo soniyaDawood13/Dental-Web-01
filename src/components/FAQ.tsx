@@ -38,10 +38,10 @@ export default function FAQ() {
             <div key={f.q} className="glass rounded-2xl overflow-hidden ring ring-gray-200">
               <button
                 onClick={() => setOpenIndex(open ? null : i)}
-                className="w-full flex items-center justify-between text-left px-6 py-3"
+                className="w-full flex items-center justify-between text-left px-3 md:px-6 py-1.5 md:py-3 "
                 aria-expanded={open}
               >
-                <span className="font-medium text-(--ink) text-xs md:text-sm">{f.q}</span>
+                <span className="font-medium text-(--ink) text-sm ">{f.q}</span>
                 <motion.span
                   animate={{ rotate: open ? 45 : 0 }}
                   transition={{ duration: 0.25 }}
@@ -59,7 +59,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
                     className="overflow-hidden "
                   >
-                    <p className="px-6 pb-5 text-(--ink)/65 text-xs md:text-sm leading-relaxed">{f.a}</p>
+                    <p className="px-3 md:px-6 pb-4 text-(--ink)/65 text-sm md:text-sm leading-relaxed">{f.a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

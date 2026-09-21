@@ -28,7 +28,7 @@ export default function Hero() {
           >
             Dental care that feels like it was made for you
           </motion.h1>
-          <motion.p variants={item} className="mt-4 text-xs md:text-sm text-(--ink)/70 max-w-md">
+          <motion.p variants={item} className="mt-4 text-sm text-(--ink)/70 max-w-md">
             Comprehensive, gentle treatment from a team that takes the time to
             know your smile — in a space designed to put you at ease.
           </motion.p>

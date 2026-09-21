@@ -38,7 +38,7 @@ export default function Testimonials() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glass rounded-3xl p-5 flex flex-col justify-between h-full ring-1 ring-(--aqua-deep) hover:ring-gray-300 transition-all duration-300"
             >
-              <blockquote className="text-(--ink)/80 leading-relaxed text-xs md:text-sm">
+              <blockquote className="text-(--ink)/80 leading-relaxed text-sm ">
                 “{q.text}”
               </blockquote>
               <figcaption className="mt-2 pt-2 border-t border-black/5">

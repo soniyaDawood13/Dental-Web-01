@@ -12,13 +12,13 @@ export default function AboutStory() {
         transition={{ duration: 0.6 }}
       >
         <h2 className="font-display text-2xl md:text-4xl text-(--ink) mb-5">Our story</h2>
-        <p className="text-(--ink)/65 leading-relaxed mb-4 text-xs md:text-sm">
+        <p className="text-(--ink)/65 leading-relaxed mb-4 text-sm">
           BrightSmile Dental was founded in 2008 with a simple mission: to
           provide exceptional dental care in a comfortable, welcoming
           environment. What started as a small practice has grown into a
           comprehensive dental center serving thousands of satisfied patients.
         </p>
-        <p className="text-(--ink)/65 leading-relaxed text-xs md:text-sm">
+        <p className="text-(--ink)/65 leading-relaxed text-sm ">
           Our commitment to staying at the forefront of dental technology
           means our patients always receive the best possible care — because
           everyone deserves a healthy, beautiful smile.

@@ -81,7 +81,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-[#ffff] mx-4 mt-2 rounded-2xl px-6 py-5 flex flex-col gap-2 md:hidden"
+          className="bg-[#ffff] mx-4 mt-2 rounded-2xl px-6 py-5 flex flex-col gap-3 md:hidden"
         >
           {links.map((l) => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-(--ink) text-sm">

@@ -27,7 +27,7 @@ export default function Values() {
               className="glass rounded-2xl p-3 cursor-pointer ring-3 ring-transparent hover:ring-(--aqua) transition-all duration-300 outline outline-gray-300"
             >
               <h3 className="font-display text-lg md:text-xl text-(--ink) mb-1">{v.title}</h3>
-              <p className="text-xs md:text-sm text-(--ink)/60">{v.desc}</p>
+              <p className="text-sm text-(--ink)/60">{v.desc}</p>
             </motion.div>
           ))}
         </div>
