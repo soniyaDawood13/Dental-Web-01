@@ -28,11 +28,11 @@ export default function Hero() {
           >
             Dental care that feels like it was made for you
           </motion.h1>
-          <motion.p variants={item} className="mt-4 text-sm text-(--ink)/70 max-w-md">
+          <motion.p variants={item} className="mt-3 text-sm md:text-base text-(--ink)/70 max-w-md">
             Comprehensive, gentle treatment from a team that takes the time to
             know your smile — in a space designed to put you at ease.
           </motion.p>
-          <motion.div variants={item} className="mt-5  md:mt-7 flex flex-wrap gap-2 md:gap-4">
+          <motion.div variants={item} className="mt-3  md:mt-4 flex flex-wrap gap-2 md:gap-4">
             <a
               href="/contact"
               className="rounded-full bg-(--aqua-deep) text-white px-3 md:px-5 py-3 font-medium hover:bg-(--ink) transition-colors text-xs md:text-sm"
@@ -46,7 +46,7 @@ export default function Hero() {
               Explore services
             </a>
           </motion.div>
-          <motion.div variants={item} className="mt-5 md:mt-10 flex gap-8 text-xs text-(--ink)/70">
+          <motion.div variants={item} className="mt-5 md:mt-6 flex gap-8 text-xs md:text-sm text-(--ink)/70">
             <span>Same-day appointments</span>
             <span>Most insurance accepted</span>
           </motion.div>

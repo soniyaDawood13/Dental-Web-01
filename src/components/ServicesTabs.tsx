@@ -16,7 +16,7 @@ const categories = [
         duration: "30-60 minutes",
         price: "$120-180",
         includes: ["Deep cleaning", "Plaque & tartar removal", "Oral cancer screening", "Digital X-rays"],
-        image: "/images/d4.jpg",
+        image: "/images/d1.png",
       },
       {
         title: "Fillings & Restorations",
@@ -24,7 +24,7 @@ const categories = [
         duration: "45-90 minutes",
         price: "$150-350",
         includes: ["Composite fillings", "Inlay & onlay restorations", "Emergency repairs"],
-        image: "/images/d4.jpg",
+        image: "/images/d2.png",
       },
     ],
   },
@@ -39,7 +39,7 @@ const categories = [
         duration: "45-60 minutes",
         price: "$200-450",
         includes: ["In-office whitening", "Custom take-home trays", "Sensitivity treatment"],
-        image: "/images/d4.jpg",
+        image: "/images/d3.jpg",
       },
       {
         title: "Veneers & Bonding",
@@ -62,7 +62,7 @@ const categories = [
         duration: "90-120 minutes",
         price: "$800-1,200",
         includes: ["Digital imaging", "Local anesthesia", "Single-visit treatment", "Crown placement"],
-        image: "/images/d4.jpg",
+        image: "/images/d5.png",
       },
       {
         title: "Crowns & Bridges",
@@ -70,7 +70,7 @@ const categories = [
         duration: "60-90 minutes",
         price: "$700-1,500",
         includes: ["CEREC same-day crowns", "Bridge fittings", "Bite adjustment"],
-        image: "/images/d4.jpg",
+        image: "/images/d6.png",
       },
     ],
   },
@@ -85,7 +85,7 @@ const categories = [
         duration: "30-45 minutes",
         price: "$90-150",
         includes: ["Gentle cleanings", "Cavity risk assessment", "Parent education"],
-        image: "/images/d4.jpg",
+        image: "/images/d7.png",
       },
       {
         title: "Fluoride & Sealants",
@@ -93,7 +93,7 @@ const categories = [
         duration: "20-30 minutes",
         price: "$60-140",
         includes: ["Fluoride treatments", "Dental sealants", "Growth monitoring"],
-        image: "/images/d4.jpg",
+        image: "/images/d8.png",
       },
     ],
   },
@@ -129,7 +129,7 @@ export default function ServicesTabs() {
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
         >
-          <div className="text-center mb-10 ">
+          <div className="text-center mb-8 ">
             <h2 className="font-display text-2xl md:text-3xl text-(--ink)">{current.label}</h2>
             <p className="text-(--ink)/60 mt-2">{current.tagline}</p>
           </div>
@@ -138,7 +138,13 @@ export default function ServicesTabs() {
           <div className="grid md:grid-cols-3 gap-6">
                 {current.treatments.map((t) => (
                   <div key={t.title} className="glass rounded-3xl p-4 flex flex-col cursor-pointer ring-1  ring-gray-300 hover:ring-(--aqua) transition-all duration-300">
-                    <Image src={t.image} alt={t.title} width={48} height={48} className="rounded-xl mb-2 object-cover" />
+                    <Image
+                      src={t.image}
+                      alt={t.title}
+                      width={48}
+                      height={48}
+                      className="mb-2 size-12 rounded-lg object-cover ring-2 ring-gray-300"
+                    />
                 <h3 className="font-display text-base md:text-lg text-(--ink) my-2 ">{t.title}</h3>
                 <p className="text-sm text-(--ink)/60 mb-2">{t.desc}</p>
                 <div className="flex items-center justify-between text-sm text-(--ink) mb-2 pb-3 border-b border-black/5">

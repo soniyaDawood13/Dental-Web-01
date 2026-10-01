@@ -53,13 +53,15 @@ export default function Team() {
                   src={t.image}
                   alt={t.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 "
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </div>
             <h3 className="font-display text-xl text-(--ink) mt-4">{t.name}</h3>
             <p className="text-base text-(--aqua-deep)">{t.role}</p>
-            <p className="text-sm text-(--ink)/55 mt-1">{t.focus}</p>
+            <p className="text-sm text-cyan-500 mt-1">{t.focus}</p>
             <p className="text-sm text-(--ink)/60 mt-3 leading-relaxed">{t.bio}</p>
           </motion.div>
         ))}

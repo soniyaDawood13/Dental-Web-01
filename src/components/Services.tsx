@@ -107,7 +107,13 @@ export default function Services() {
             className="glass rounded-3xl p-4 flex flex-col cursor-pointer ring-1 ring-gray-300 hover:ring-(--aqua)"
           >
             <div className="w-12 h-12 rounded-xl overflow-hidden relative shrink-0 ">
-              <Image src={s.image} alt={s.alt} fill className="object-cover" />
+              <Image
+                src={s.image}
+                alt={s.alt}
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
               
             </div>
             <div>
