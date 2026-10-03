@@ -8,14 +8,39 @@ export default function PageLoader() {
 
   useEffect(() => {
     const minTime = new Promise((resolve) => setTimeout(resolve, 1200));
-    const pageReady =
+
+    const pageLoaded =
       document.readyState === "complete"
         ? Promise.resolve()
         : new Promise<void>((resolve) =>
             window.addEventListener("load", () => resolve(), { once: true })
           );
 
-    Promise.all([minTime, pageReady]).then(() => setLoading(false));
+    const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+
+    const imagesReady = new Promise<void>((resolve) => {
+      const images = Array.from(document.images);
+      if (images.length === 0) return resolve();
+
+      let remaining = images.length;
+      const done = () => {
+        remaining -= 1;
+        if (remaining <= 0) resolve();
+      };
+
+      images.forEach((img) => {
+        if (img.complete) {
+          done();
+        } else {
+          img.addEventListener("load", done, { once: true });
+          img.addEventListener("error", done, { once: true });
+        }
+      });
+    });
+
+    Promise.all([minTime, pageLoaded, fontsReady, imagesReady]).then(() =>
+      setLoading(false)
+    );
   }, []);
 
   return (
@@ -48,7 +73,6 @@ export default function PageLoader() {
                 stroke="white"
                 strokeWidth="2"
               />
-              {/* cute face */}
               <circle cx="28" cy="32" r="2.6" fill="var(--ink)" />
               <circle cx="44" cy="32" r="2.6" fill="var(--ink)" />
               <path d="M29 40c2.5 2.5 9.5 2.5 12 0" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" />
@@ -57,20 +81,15 @@ export default function PageLoader() {
             </svg>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="font-display text-2xl text-white mt-5 tracking-wide"
-          >
+          <p className="font-display text-2xl text-white mt-5 tracking-wide">
             BrightSmile
-          </motion.p>
+          </p>
 
           <div className="flex gap-1.5 mt-4">
             {[0, 1, 2].map((i) => (
               <motion.span
                 key={i}
-                className="w-2 h-2 rounded-full bg-var(--aqua)"
+                className="w-2 h-2 rounded-full bg-(--aqua)"
                 animate={{ opacity: [0.3, 1, 0.3] }}
                 transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
               />

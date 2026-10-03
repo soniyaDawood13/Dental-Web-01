@@ -1,25 +1,21 @@
-# BrightSmile Dental — Next.js Website
+# Modern Dental Website
 
-## Setup
-```bash
-npm install
-cp .env.local.example .env.local   # then fill in your SMTP details
-npm run dev
-```
-Open http://localhost:3000
+<!-- ![Gym Website](./public/images/gym-cover.png) -->
 
-## Contact form emails
-The appointment form on the site posts to `src/app/api/contact/route.ts`,
-which sends you an email via Nodemailer/SMTP — no database, no third-party
-form service. Fill in `.env.local` with your email provider's SMTP settings
-(Gmail example included) and every submission lands straight in your inbox.
+## Features
 
-## Replacing the placeholder image
-Every image on the site currently points to `public/images/placeholder.svg`.
-Swap that one file for your own image (same filename, or update the path in
-each component) to update the whole site at once.
+- Fully responsive across mobile, tablet, and desktop
+- Smooth, scroll-triggered animations powered by Framer Motion
+- Custom glassmorphism + organic curved-shape design system
+- Day/Night theme toggle (cookie-based, no flash on load)
+- WhatsApp-integrated contact form — no backend required
+- Reusable, component-driven architecture for fast customization
+- SEO-friendly metadata out of the box
 
-## Structure
-- `src/app/page.tsx` — assembles all sections
-- `src/components/` — Navbar, Hero, Stats, Services, WhyChooseUs, Team, Testimonials, FAQ, ContactSection, Footer
-- `src/app/api/contact/route.ts` — email-sending API route
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Design System:** Custom glassmorphism + organic curved-shape UI
